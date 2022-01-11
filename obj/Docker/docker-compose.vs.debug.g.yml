@@ -1,6 +1,34 @@
 version: '3.4'
 
 services:
+  tiendaservicio.api.carritocompra:
+    image: tiendaservicioapicarritocompra:dev
+    container_name: TiendaServicio.Api.CarritoCompra
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "TiendaServicio.Api.CarritoCompra"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
+    volumes:
+      - C:\MicroserviceTienda\TiendaServicios\TiendaServicio.Api.CarritoCompra:/app
+      - C:\MicroserviceTienda\TiendaServicios:/src
+      - C:\Users\franc\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\franc\.nuget\packages\:/root/.nuget/packages:ro
+      - C:\Program Files (x86)\Microsoft\Xamarin\NuGet\:/root/.nuget/fallbackpackages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"/app/bin/Debug/netcoreapp3.1/TiendaServicio.Api.CarritoCompra.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
   tiendaservicios.api.autor:
     image: tiendaserviciosapiautor:dev
     container_name: TiendaServicios.Api.Autor
@@ -29,6 +57,36 @@ services:
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
+
+  tiendaservicios.api.gateway:
+    image: tiendaserviciosapigateway:dev
+    container_name: TiendaServicios.Api.Gateway
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "TiendaServicios.Api.Gateway"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
+    volumes:
+      - C:\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Gateway:/app
+      - C:\MicroserviceTienda\TiendaServicios:/src
+      - C:\Users\franc\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\franc\.nuget\packages\:/root/.nuget/packages:ro
+      - C:\Program Files (x86)\Microsoft\Xamarin\NuGet\:/root/.nuget/fallbackpackages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"/app/bin/Debug/netcoreapp3.1/TiendaServicios.Api.Gateway.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
   tiendaservicios.api.libro:
     image: tiendaserviciosapilibro:dev
     container_name: TiendaServicios.Api.Libro

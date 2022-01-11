@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7HtSfK7+r3TVLHQR7VICG7EETZI7oUbNq5GGatkKKw/h39XmctKssyTZD1P+Yif1udmg0dKMC7W6y7guLJhjqQ==",
+  "dgSpecHash": "vU8ZtdqjBf51R76Dmj7lGcRi3zXyS79xH9jOI5kLZtBkBiWHEK+8a9x05qBpGoptGHGEBacMkwO4E2QywNz+/Q==",
   "success": true,
   "projectFilePath": "C:\\MicroserviceTienda\\TiendaServicios\\TiendaServicio.Api.CarritoCompra\\TiendaServicio.Api.CarritoCompra.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.20\\microsoft.extensions.primitives.3.1.20.nupkg.sha512",
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\franc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
     "C:\\Users\\franc\\.nuget\\packages\\mysql.data\\8.0.20\\mysql.data.8.0.20.nupkg.sha512",

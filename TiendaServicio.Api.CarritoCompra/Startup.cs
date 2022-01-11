@@ -29,7 +29,6 @@ namespace TiendaServicio.Api.CarritoCompra
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ILibrosService, LibrosService>();
-            services.AddControllers();
             services.AddDbContext<CarritoContexto>(options =>
             {
                 options.UseMySQL(Configuration.GetConnectionString("ConexionDatabase"));
@@ -39,6 +38,7 @@ namespace TiendaServicio.Api.CarritoCompra
             {
                 config.BaseAddress = new Uri(Configuration["Services:Libros"]);
             });
+            services.AddControllers();
 
         }
 

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = TiendaServicios.Api.Gateway
+build_property.ProjectDir = C:\MicroserviceTienda\TiendaServicios\TiendaServicios.Api.Gateway\
